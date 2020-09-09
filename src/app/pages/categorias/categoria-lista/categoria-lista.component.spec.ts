@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CategoriaListaComponent } from './categoria-lista.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('CategoriaListaComponent', () => {
   let component: CategoriaListaComponent;
@@ -8,6 +9,7 @@ describe('CategoriaListaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [HttpClientModule],
       declarations: [ CategoriaListaComponent ]
     })
     .compileComponents();
@@ -22,4 +24,8 @@ describe('CategoriaListaComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('teste', () => {
+    expect(component.consultarCategorias().length).toEqual(0);
+  })
 });

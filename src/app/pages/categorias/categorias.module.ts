@@ -10,7 +10,9 @@ import { CategoriaFormComponent } from './categoria-form/categoria-form.componen
   declarations: [CategoriaListaComponent, CategoriaFormComponent],
   imports: [
     CommonModule,
-    CategoriasRoutingModule
-  ]
+    CategoriasRoutingModule,
+    
+  ],
+  
 })
 export class CategoriasModule { }

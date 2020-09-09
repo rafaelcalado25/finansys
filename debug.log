@@ -1,1 +1,83 @@
 [0908/144352.082:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/092928.385:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/092931.634:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/092932.405:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/093029.249:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/093033.911:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/093033.912:ERROR:process_info.cc(617)] range at 0x219e689bb80, size 0x84 fully unreadable
+[0909/093033.912:ERROR:process_info.cc(617)] range at 0x219e6899890, size 0xf8 fully unreadable
+[0909/093033.912:ERROR:process_info.cc(617)] range at 0x219e6899970, size 0x18 fully unreadable
+[0909/093033.913:ERROR:process_info.cc(617)] range at 0x219e689bb80, size 0x84 fully unreadable
+[0909/093033.913:ERROR:process_info.cc(617)] range at 0x219e6899890, size 0xf8 fully unreadable
+[0909/093033.913:ERROR:process_info.cc(617)] range at 0x219e6899970, size 0x18 fully unreadable
+[0909/093033.914:ERROR:process_info.cc(617)] range at 0x219e6899890, size 0xf8 fully unreadable
+[0909/093033.914:ERROR:process_info.cc(617)] range at 0x219e6899970, size 0x18 fully unreadable
+[0909/093033.914:ERROR:process_info.cc(617)] range at 0x219e689bb80, size 0x84 fully unreadable
+[0909/093128.239:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/093206.675:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/093209.269:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/093512.355:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/093513.319:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/093514.135:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/093514.955:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/093515.792:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/104616.284:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/104616.287:ERROR:process_info.cc(617)] range at 0x230ce504a30, size 0x84 fully unreadable
+[0909/104616.287:ERROR:process_info.cc(617)] range at 0x230ce504900, size 0x84 fully unreadable
+[0909/104616.288:ERROR:process_info.cc(617)] range at 0x230ce504a30, size 0x84 fully unreadable
+[0909/104616.288:ERROR:process_info.cc(617)] range at 0x230ce504900, size 0x84 fully unreadable
+[0909/104616.288:ERROR:process_info.cc(617)] range at 0x230ce504900, size 0x84 fully unreadable
+[0909/104616.289:ERROR:process_info.cc(617)] range at 0x230ce505020, size 0x84 fully unreadable
+[0909/104616.289:ERROR:process_info.cc(617)] range at 0x230ce504a30, size 0x84 fully unreadable
+[0909/104618.354:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/104620.334:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/104620.336:ERROR:process_info.cc(617)] range at 0x22d9a33b620, size 0x84 fully unreadable
+[0909/104620.336:ERROR:process_info.cc(617)] range at 0x22d9a3399a0, size 0xf8 fully unreadable
+[0909/104620.336:ERROR:process_info.cc(617)] range at 0x22d9a339a80, size 0x18 fully unreadable
+[0909/104620.337:ERROR:process_info.cc(617)] range at 0x22d9a33b620, size 0x84 fully unreadable
+[0909/104620.337:ERROR:process_info.cc(617)] range at 0x22d9a3399a0, size 0xf8 fully unreadable
+[0909/104620.337:ERROR:process_info.cc(617)] range at 0x22d9a339a80, size 0x18 fully unreadable
+[0909/104620.337:ERROR:process_info.cc(617)] range at 0x22d9a3399a0, size 0xf8 fully unreadable
+[0909/104620.337:ERROR:process_info.cc(617)] range at 0x22d9a339a80, size 0x18 fully unreadable
+[0909/104620.337:ERROR:process_info.cc(617)] range at 0x22d9a33b620, size 0x84 fully unreadable
+[0909/105642.723:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/105643.982:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/105645.107:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/105739.521:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/105857.353:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/105900.489:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/105902.634:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/105957.608:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/110000.921:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/110209.214:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/110303.658:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/110304.444:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/110402.378:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/110404.196:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/110539.853:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/110540.789:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/110541.774:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/110544.416:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/110643.658:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/110644.504:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/110741.248:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/110741.250:ERROR:process_info.cc(617)] range at 0x22060d11a70, size 0x84 fully unreadable
+[0909/110741.250:ERROR:process_info.cc(617)] range at 0x22060d12190, size 0x84 fully unreadable
+[0909/110741.251:ERROR:process_info.cc(617)] range at 0x22060d11a70, size 0x84 fully unreadable
+[0909/110741.251:ERROR:process_info.cc(617)] range at 0x22060d12190, size 0x84 fully unreadable
+[0909/110741.252:ERROR:process_info.cc(617)] range at 0x22060d12190, size 0x84 fully unreadable
+[0909/110741.252:ERROR:process_info.cc(617)] range at 0x22060d11ba0, size 0x84 fully unreadable
+[0909/110741.252:ERROR:process_info.cc(617)] range at 0x22060d11a70, size 0x84 fully unreadable
+[0909/112058.099:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/112059.132:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/112237.613:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/112238.771:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/112239.832:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/112335.570:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/112336.477:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/112337.317:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/112338.011:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/112338.996:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/112437.210:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/112438.545:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0909/112439.411:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
