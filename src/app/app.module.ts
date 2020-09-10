@@ -7,12 +7,14 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 import { InMemoryDatabase} from './in-memory-database';
 import { HttpClientModule } from '@angular/common/http';
+//import { SortPipe } from './pages/shared/sort.pipe';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
     BrowserModule,

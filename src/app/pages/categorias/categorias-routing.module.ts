@@ -5,10 +5,9 @@ import { CategoriaFormComponent } from './categoria-form/categoria-form.componen
 
 export const routes: Routes = [
   {path:'', component: CategoriaListaComponent},
-  {path:'listar', component: CategoriaListaComponent},
-  {path:'listar/:id', component: CategoriaFormComponent},
-  {path:'listar/:id/edit', component: CategoriaFormComponent},
-  {path:'listar/new', component: CategoriaFormComponent}
+  {path:':id', component: CategoriaFormComponent},
+  {path:':id/edit', component: CategoriaFormComponent},
+  {path:'new', component: CategoriaFormComponent}
 ];
 
 @NgModule({
