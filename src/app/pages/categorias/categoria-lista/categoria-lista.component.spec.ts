@@ -24,8 +24,5 @@ describe('CategoriaListaComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('teste', () => {
-    expect(component.consultarCategorias().length).toEqual(0);
-  })
+  
 });

@@ -28,13 +28,13 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor = "let c of categorias">
+        <tr *ngFor = "let c of categorias | sort:'id'">
             <td>
-                <strong>{{c.nome}}</strong><br>
+                <strong>{{c.id}}-{{c.nome}}</strong><br>
                 <small>{{c.descricao}}</small>
             </td>
             <td>
-                <a [routerLink]= "[123,'edit']" class="btn btn-outline-info btn-sm mr-2">Editar</a>
+                <a [routerLink]= "[c.id,'edit']" class="btn btn-outline-info btn-sm mr-2">Editar</a>
                 <button (click)="deletar(c)" class="btn btn-outline-danger btn-sm">Excluir</button>
             </td>
         </tr>
