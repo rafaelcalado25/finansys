@@ -10,8 +10,8 @@ export class InMemoryDatabase implements InMemoryDbService{
 
     createDb(reqInfo?: RequestInfo) {
         const categorias: Categoria[] = [
-            {id:1, nome:'Lazer', descricao:'Praia, Cinema'},
-            {id:2, nome:'Negocios', descricao:'Reunião, Escritório'},
+            {id:2, nome:'Lazer', descricao:'Praia, Cinema'},
+            {id:1, nome:'Negocios', descricao:'Reunião, Escritório'},
         ];
 
         const entries: Entry[] = [
