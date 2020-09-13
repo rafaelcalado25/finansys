@@ -14,7 +14,7 @@
 <div class="row mb-4">
     <div class="col-md-10">
         <h1 class="h2 border-left pl-2">
-            Lançamento - {{entry.nome}}
+            Lançamento - {{baseResourceModel.nome}}
         </h1>
     </div>
     <div class="col-md-2">
@@ -23,7 +23,7 @@
         </a>        
     </div>
 </div>
-<form [formGroup] = "entryForm" (submit)="submitForm()">
+<form [formGroup] = "resourceForm" (submit)="submitForm()">
     <div class="card mb-4">
         <div class="card-header">
             Informações sobre Lançamento
@@ -45,8 +45,8 @@
                     <select name="tipo" id="tipo" formControlName="tipo" class="form-control">                        
                             <option *ngFor="let t of entryType" [value]="t[0]">{{t[1]}}</option>                        
                     </select>
-                    <div class="text-danger" *ngIf="entryForm.get('tipo').invalid && entryForm.get('tipo').touched">
-                        <div *ngIf="entryForm.get('tipo').errors.required">Item Obrigatorio</div>
+                    <div class="text-danger" *ngIf="resourceForm.get('tipo').invalid && resourceForm.get('tipo').touched">
+                        <div *ngIf="resourceForm.get('tipo').errors.required">Item Obrigatorio</div>
                         
                     </div>
                 </div>
@@ -55,9 +55,9 @@
                     <!-- Campo Nome -->
                     <label for="nome">Lançamento</label>
                     <input type="text" class="form-control" id="nome" formControlName="nome">
-                    <div class="text-danger" *ngIf="entryForm.get('nome').invalid && entryForm.get('nome').touched">
-                        <div *ngIf="entryForm.get('nome').errors.required">Dado Obrigatorio</div>
-                        <div *ngIf="entryForm.get('nome').errors.minlength">No mínimo 2 caracteres</div>
+                    <div class="text-danger" *ngIf="resourceForm.get('nome').invalid && resourceForm.get('nome').touched">
+                        <div *ngIf="resourceForm.get('nome').errors.required">Dado Obrigatorio</div>
+                        <div *ngIf="resourceForm.get('nome').errors.minlength">No mínimo 2 caracteres</div>
                     </div>
                 </div>
 
@@ -75,8 +75,8 @@
                         class="form-control text-right" id="amount" formControlName="amount">                    
                     </div>
 
-                    <div class="text-danger" *ngIf="entryForm.get('amount').invalid && entryForm.get('amount').touched">
-                        <div *ngIf="entryForm.get('amount').errors.required">Dado Obrigatorio</div>                        
+                    <div class="text-danger" *ngIf="resourceForm.get('amount').invalid && resourceForm.get('amount').touched">
+                        <div *ngIf="resourceForm.get('amount').errors.required">Dado Obrigatorio</div>                        
                     </div>
                 </div>
 
@@ -91,8 +91,8 @@
                         </p-calendar>        
                     
 
-                    <div class="text-danger" *ngIf="entryForm.get('date').invalid && entryForm.get('date').touched">
-                        <div *ngIf="entryForm.get('date').errors.required">Dado Obrigatorio</div>                        
+                    <div class="text-danger" *ngIf="resourceForm.get('date').invalid && resourceForm.get('date').touched">
+                        <div *ngIf="resourceForm.get('date').errors.required">Dado Obrigatorio</div>                        
                     </div>
                 </div>
             </div>
@@ -103,18 +103,18 @@
                     <!-- Campo Paid -->
                     <label for="paid">Pago</label>
                     <div class="btn-group">
-                        <label [class.active]="entryForm.get('paid').value == true" 
-                            class="btn btn-outline-info" (click)="entryForm.get('paid').setValue(true)">
+                        <label [class.active]="resourceForm.get('paid').value == true" 
+                            class="btn btn-outline-info" (click)="resourceForm.get('paid').setValue(true)">
                                 Pago
                         </label>
-                        <label  [class.active]="entryForm.get('paid').value == false" 
-                            class="btn btn-outline-info" (click)="entryForm.get('paid').setValue(false)">
+                        <label  [class.active]="resourceForm.get('paid').value == false" 
+                            class="btn btn-outline-info" (click)="resourceForm.get('paid').setValue(false)">
                             Pendente
                     </label>
                     </div>
 
-                    <div class="text-danger" *ngIf="entryForm.get('paid').invalid && entryForm.get('paid').touched">
-                        <div *ngIf="entryForm.get('paid').errors.required">Dado Obrigatorio</div>                        
+                    <div class="text-danger" *ngIf="resourceForm.get('paid').invalid && resourceForm.get('paid').touched">
+                        <div *ngIf="resourceForm.get('paid').errors.required">Dado Obrigatorio</div>                        
                     </div>
                 </div>
 
@@ -125,8 +125,8 @@
                             <option *ngFor="let c of categorias | sort:'id'" [value]="c.id">{{c.nome}}</option>
                                                    
                     </select>
-                    <div class="text-danger" *ngIf="entryForm.get('categoriaId').invalid && entryForm.get('categoriaId').touched">
-                        <div *ngIf="entryForm.get('categoriaId').errors.required">Item Obrigatorio</div>
+                    <div class="text-danger" *ngIf="resourceForm.get('categoriaId').invalid && resourceForm.get('categoriaId').touched">
+                        <div *ngIf="resourceForm.get('categoriaId').errors.required">Item Obrigatorio</div>
                         
                     </div>
                 </div>
@@ -140,10 +140,10 @@
         </div>
     </div>
 
-    <button type="submit" class="btn btn-primary btn-lg" [disabled] = "subimmitingForm || entryForm.invalid">
+    <button type="submit" class="btn btn-primary btn-lg" [disabled] = "subimmitingForm || resourceForm.invalid">
         Salvar
     </button>
 </form>
 <pre>
-    {{entryForm.value | json}}
+    {{resourceForm.value | json}}
 </pre>

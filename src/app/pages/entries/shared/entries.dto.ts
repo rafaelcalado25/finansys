@@ -1,7 +1,8 @@
 import { Categoria } from '../../categorias/shared/categoria.dto';
 import { Type } from './constante.config';
+import { BaseResourceModel } from 'src/app/shared/models/base-resource.model';
 
-export interface Entry {
+export interface Entry extends BaseResourceModel {
     id?: number,
     nome?: string,
     descricao?: string,
@@ -11,4 +12,6 @@ export interface Entry {
     paid?: boolean,
     categoriaId?: number,
     categoria?: Categoria,
+
+    
 }

@@ -1,19 +1,20 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Injectable, Injector } from '@angular/core';
+
 import { Entry } from './entries.dto';
-import { Observable, throwError } from 'rxjs';
-import { catchError, map } from 'rxjs/operators';
+import { BaseResourceService } from 'src/app/shared/services/base-resource.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class EntriesService {
+export class EntriesService extends BaseResourceService<Entry>{
 
-  private apiPath:string = 'api/entries';
+  //private apiPath:string = 'api/entries';
 
-  constructor(private http: HttpClient) { }
+  constructor(protected injector : Injector) { 
+    super('api/entries', injector);
+  }
 
-  getEntries(): Observable<Entry[]>{
+  /* getEntries(): Observable<Entry[]>{
     return this.http.get(this.apiPath).pipe(
         catchError(this.handleError),
         map(this.jsonDataToCategorias)
@@ -49,11 +50,11 @@ export class EntriesService {
         catchError(this.handleError),
         map(()=> null)
     );
-  }
+  } */
 
   //PRIVATE METHODS
 
-  private jsonDataToCategorias (datas: any[]):Entry[]{
+  /* private jsonDataToCategorias (datas: any[]):Entry[]{
     const entries: Entry[] = [];
     datas.forEach(data => {
       entries.push(data as Entry);
@@ -70,5 +71,5 @@ export class EntriesService {
   private handleError (error: any): Observable<any>{
       console.error('Erro na requisição. Error => ', error);
       return throwError(error);
-  }
+  } */
 }

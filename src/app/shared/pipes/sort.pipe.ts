@@ -12,7 +12,6 @@ export class SortPipe implements PipeTransform {
       const c = array[0];
       
     if(c){
-      console.log(c.hasOwnProperty(campo));
       if(!c.hasOwnProperty(campo))
       return array;
 

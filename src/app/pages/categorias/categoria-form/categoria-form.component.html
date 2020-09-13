@@ -14,7 +14,7 @@
 <div class="row mb-4">
     <div class="col-md">
         <h1 class="h2 border-left pl-2">
-            Categorias
+            Categorias - {{pageTitle}}
         </h1>
     </div>
     <div class="col-md">
@@ -23,7 +23,7 @@
         </a>        
     </div>
 </div>
-<form [formGroup] = "categoriaForm" (submit)="submitForm()">
+<form [formGroup] = "resourceForm" (submit)="submitForm()">
     <div class="card mb-4">
         <div class="card-header">
             Informações sobre categorias
@@ -40,9 +40,9 @@
                 <div class="form-group col-md-4">
                     <label for="nome">Nome</label>
                     <input type="text" class="form-control" id="nome" formControlName="nome">
-                    <div class="text-danger" *ngIf="categoriaForm.get('nome').invalid && categoriaForm.get('nome').touched">
-                        <div *ngIf="categoriaForm.get('nome').errors.required">Dado Obrigatorio</div>
-                        <div *ngIf="categoriaForm.get('nome').errors.minlength">No mínimo 2 caracteres</div>
+                    <div class="text-danger" *ngIf="resourceForm.get('nome').invalid && resourceForm.get('nome').touched">
+                        <div *ngIf="resourceForm.get('nome').errors.required">Dado Obrigatorio</div>
+                        <div *ngIf="resourceForm.get('nome').errors.minlength">No mínimo 2 caracteres</div>
                     </div>
                 </div>
 
@@ -54,7 +54,7 @@
         </div>
     </div>
 
-    <button type="submit" class="btn btn-primary btn-lg" [disabled] = "subimmitingForm || categoriaForm.invalid">
+    <button type="submit" class="btn btn-primary btn-lg" [disabled] = "subimmitingForm || resourceForm.invalid">
         Salvar
     </button>
 </form>

@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CategoriaListaComponent } from './categoria-lista.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 describe('CategoriaListaComponent', () => {
   let component: CategoriaListaComponent;
@@ -9,7 +10,7 @@ describe('CategoriaListaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HttpClientModule],
+      imports: [HttpClientModule, SharedModule],
       declarations: [ CategoriaListaComponent ]
     })
     .compileComponents();

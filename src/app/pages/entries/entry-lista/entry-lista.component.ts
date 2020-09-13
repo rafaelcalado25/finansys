@@ -12,7 +12,7 @@ export class EntryListaComponent implements OnInit {
   entries : Entry[] = [] ;
 
   constructor(private entriesServices: EntriesService) {
-    this.entriesServices.getEntries().subscribe(
+    this.entriesServices.getResources().subscribe(
       response => {
         this.entries = response;
       }
@@ -25,7 +25,7 @@ export class EntryListaComponent implements OnInit {
   deletar(entry: Entry){
     const mustDelete = confirm('Vai querer arroxar o nó mesmo?');
     if(mustDelete){
-      this.entriesServices.eliminarEntry(entry.id).subscribe(()=>{
+      this.entriesServices.eliminarResource(entry.id).subscribe(()=>{
         this.entries = this.entries.filter(c => {
           if(c.id != entry.id){
             return c;

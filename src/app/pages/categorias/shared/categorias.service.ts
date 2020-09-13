@@ -1,19 +1,21 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
+import { Injectable, Injector } from '@angular/core';
 import { Categoria } from './categoria.dto';
 import { catchError, map } from 'rxjs/operators';
+import { BaseResourceService } from 'src/app/shared/services/base-resource.service';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CategoriasService {
+export class CategoriasService extends BaseResourceService<Categoria>{
 
-  private apiPath:string = 'api/categorias';
+  
+  constructor(protected injector: Injector) { 
+    super('api/categorias', injector);    
+    
+  }
 
-  constructor(private http: HttpClient) { }
-
-  getCategorias(): Observable<Categoria[]>{
+  /* getCategorias(): Observable<Categoria[]>{
     return this.http.get(this.apiPath).pipe(
         catchError(this.handleError),
         map(this.jsonDataToCategorias)
@@ -70,5 +72,5 @@ export class CategoriasService {
   private handleError (error: any): Observable<any>{
       console.error('Erro na requisição. Error => ', error);
       return throwError(error);
-  }
+  } */
 }

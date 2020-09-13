@@ -14,7 +14,7 @@ export class CategoriaListaComponent implements OnInit {
   categorias : Categoria[] = [] ;
 
   constructor(private categoriasServices: CategoriasService) {
-    this.categoriasServices.getCategorias().subscribe(
+    this.categoriasServices.getResources().subscribe(
       response => {
         this.categorias = response;
       }
@@ -27,7 +27,7 @@ export class CategoriaListaComponent implements OnInit {
   deletar(categoria: Categoria){
     const mustDelete = confirm('Vai querer arroxar o nó mesmo?');
     if(mustDelete){
-      this.categoriasServices.eliminarCategoria(categoria.id).subscribe(()=>{
+      this.categoriasServices.eliminarResource(categoria.id).subscribe(()=>{
         this.categorias = this.categorias.filter(c => {
           if(c.id != categoria.id){
             return c;

@@ -15,5 +15,5 @@ describe('CategoriasService', () => {
   xit('should be created', () => {
     expect(service).toBeTruthy();
   });
-    
+  
 });

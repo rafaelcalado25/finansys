@@ -1,125 +1,37 @@
-import { Component, OnInit, AfterContentChecked } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Component, Injector } from '@angular/core';
+import {  Validators } from '@angular/forms';
 import { Categoria, CategoriasService } from '../shared';
-import { ActivatedRoute, Router } from '@angular/router';
-import { switchMap } from 'rxjs/operators';
-import toastr from 'toastr';
+import { BaseResourceFormComponent } from 'src/app/shared/components/base-resource-form/base-resource-form.component';
 
 @Component({
   selector: 'app-categoria-form',
   templateUrl: './categoria-form.component.html',
   styleUrls: ['./categoria-form.component.css']
 })
-export class CategoriaFormComponent implements OnInit, AfterContentChecked {
-
-  currentAction: string;
-  currentActionEdit: boolean;
-  categoriaForm: FormGroup;
-  pageTitle: string;
-  serverErrorMessages: string[] = null;
-  subimmitingForm: boolean = false;
+export class CategoriaFormComponent extends BaseResourceFormComponent<Categoria> {
+ 
   categoria: Categoria = {};
 
-  constructor(private categoriaService: CategoriasService,
-    private formBuider: FormBuilder,
-    private route: ActivatedRoute,
-    private router: Router,
-    ) { }
-
-
-
-  ngAfterContentChecked(): void {
-    this.setPageTitle();
-  }
-
-  ngOnInit(): void {
-    this.setcurrentAction();
-    this.buildCategoriaForm();
-    this.loadCategoria();
-  }
-
-  submitForm(){
-    this.subimmitingForm = true;
-    if(this.currentActionEdit){
-      this.atualizarCategoria();
-    } else {
-      this.criarCategoria();
+  constructor(protected categoriaService: CategoriasService,
+    protected injetor: Injector
+    ) { 
+      super(categoriaService, injetor, {});
+      
     }
-  }
 
-  // PRIVATES METHODS
-
-  private setcurrentAction(): void {
-    if(this.route.snapshot.url[0].path == 'new'){
-      this.currentAction = 'Novo';
-      this.currentActionEdit = false;
-    } else {
-      this.currentAction = 'Editar';
-      this.currentActionEdit = true;
+    protected resourceFromEntryForm(): Categoria {
+      
+      const categoria : Categoria =({id:this.resourceForm.value["id"],nome:this.resourceForm.value["nome"],
+      descricao:this.resourceForm.value["descricao"]
+      });
+      return categoria;
     }
-  }
-
-  private buildCategoriaForm(): void{
-    this.categoriaForm = this.formBuider.group({
-      id: [null],
-      nome:[null, [Validators.required, Validators.minLength(2)]],
-      descricao: [null]
-    });
-  }
-
-  private loadCategoria(): void {
-    if(this.currentActionEdit){
-      this.route.paramMap.pipe(
-        switchMap(params => this.categoriaService.getById(+params.get('id')))
-        ).subscribe(
-          response =>{
-            this.categoria = response;
-            this.categoriaForm.patchValue(this.categoria);
-          },
-          error => {
-            console.error('Erro no load categoria');
-          }
-        );
+    
+    protected buildResourceForm(): void {
+      this.resourceForm = this.formBuider.group({
+        id: [null],
+        nome:[null, [Validators.required, Validators.minLength(2)]],
+        descricao: [null]
+      });
     }
-  }
-
-  private setPageTitle(){
-    if(!this.currentActionEdit){
-      this.pageTitle = 'Cadastro de nova categoria';
-    } else {
-      const categoriaNome = this.categoria.nome || "";
-      this.pageTitle = 'Editar a categoria ' + categoriaNome;
-    }
-  }
-
-  private atualizarCategoria(){
-    const categoria : Categoria =({id:this.categoriaForm.value["id"],nome:this.categoriaForm.value["nome"],descricao:this.categoriaForm.value["descricao"]});
-    this.categoriaService.atualizarCategoria(categoria).subscribe(
-      response => {
-        this.operacaoRealizadaSucesso(response);
-      },
-      error => {
-        toastr.error('Erro ao atualizar a categoria');
-      }
-    );
-  }
-
-  private criarCategoria() {
-    const categoria : Categoria =({id:null,nome:this.categoriaForm.value["nome"],descricao:this.categoriaForm.value["descricao"]});
-    this.categoriaService.inserirCategoria(categoria).subscribe(
-      response => {
-        this.operacaoRealizadaSucesso(response);
-      },
-      error => {
-
-      }
-    );
-
-  }
-
-  private operacaoRealizadaSucesso(categoria: Categoria){
-    toastr.success('Operação realizada com sucesso!');
-    this.router.navigateByUrl('categorias');
-  }
-
 }
