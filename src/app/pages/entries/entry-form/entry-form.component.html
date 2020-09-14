@@ -1,28 +1,6 @@
-<nav class="mb-5">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item">
-            <a routerLink="/">Home</a>
-        </li>
-        <li class="breadcrumb-item">
-            <a routerLink="/entries"> Lançamentos</a>
-        </li>
-        <li class="breadcrumb-item active">
-            Formulário de Lançamentos - {{currentAction}}
-        </li>
-    </ol>
-</nav>
-<div class="row mb-4">
-    <div class="col-md-10">
-        <h1 class="h2 border-left pl-2">
-            Lançamento - {{baseResourceModel.nome}}
-        </h1>
-    </div>
-    <div class="col-md-2">
-        <a routerLink="/entries" class="btn btn-light float-right">
-            << Voltar
-        </a>        
-    </div>
-</div>
+<app-page-header [pageHeaderModal]="getItemHeader()" 
+[breadCrumbItems]="[{text:'Lançamentos', link:'/entries'},{text:'Formulário de Lançamentos - ' + currentAction}]">
+</app-page-header>
 <form [formGroup] = "resourceForm" (submit)="submitForm()">
     <div class="card mb-4">
         <div class="card-header">
@@ -144,6 +122,8 @@
         Salvar
     </button>
 </form>
-<pre>
-    {{resourceForm.value | json}}
-</pre>
+<!-- <pre>
+    <div *ngFor= "let item of items | keyvalue">
+        {{item.value.acao}}
+    </div>
+</pre> -->

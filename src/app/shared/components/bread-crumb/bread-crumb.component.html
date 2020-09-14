@@ -1,0 +1,12 @@
+<nav class="mb-5">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a routerLink="/">Home</a>
+        </li>
+        <li class="breadcrumb-item" *ngFor="let item of items; let i = index" 
+            [class.active]="items && items.length == i+1">
+            <a  *ngIf="items && items.length != i+1" [routerLink]="item.link"> {{item.text}}</a>
+            <span *ngIf="items && items.length == i+1">{{item.text}}</span>
+        </li>        
+    </ol>
+</nav>

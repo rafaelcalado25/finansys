@@ -1,6 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CategoriasService } from '../shared/categorias.service';
 import { Categoria } from '../shared/categoria.dto';
+import { BaseResourceListaComponent } from 'src/app/shared/components/base-resource/base-resource-lista.component';
+import { BreadCrumbItem } from 'src/app/shared/components/bread-crumb/bread-crumb.component';
+import { PageHeaderModal } from 'src/app/shared/components/page-header/page-header.component';
+import { PAGE_HEADER_ITEMS } from 'src/app/shared/constantes.config';
 
 
 @Component({
@@ -9,38 +13,15 @@ import { Categoria } from '../shared/categoria.dto';
   styleUrls: ['./categoria-lista.component.css'],
   
 })
-export class CategoriaListaComponent implements OnInit {
+export class CategoriaListaComponent extends BaseResourceListaComponent<Categoria>{
+  
+  itemHeader: PageHeaderModal = PAGE_HEADER_ITEMS.get('LIST');
 
-  categorias : Categoria[] = [] ;
-
-  constructor(private categoriasServices: CategoriasService) {
-    this.categoriasServices.getResources().subscribe(
-      response => {
-        this.categorias = response;
-      }
-    );
-   }
-
-  ngOnInit(): void {
-  }
-
-  deletar(categoria: Categoria){
-    const mustDelete = confirm('Vai querer arroxar o nó mesmo?');
-    if(mustDelete){
-      this.categoriasServices.eliminarResource(categoria.id).subscribe(()=>{
-        this.categorias = this.categorias.filter(c => {
-          if(c.id != categoria.id){
-            return c;
-          }
-        });
-      },
-      error => {
-        console.error('teste');
-      });
-    }else {
-      console.log('voce é um cagão');
-    }
-    
-  }
+  constructor(protected categoriasServices: CategoriasService) {
+    super(categoriasServices);   
+    this.itemHeader.acao = this.itemHeader.acao + ' Categoria';
+    this.itemHeader.link = 'new';
+    this.itemHeader.title = 'Categorias';
+   } 
 
 }

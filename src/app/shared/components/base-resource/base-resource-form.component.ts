@@ -109,15 +109,23 @@ export abstract class BaseResourceFormComponent <T extends BaseResourceModel> im
 
   protected criarResource() {
     const resource : T = this.resourceFromEntryForm();
-    this.baseResourceService.inserirResource(resource).subscribe(
+    this.baseResourceService.getResources().subscribe(
       response => {
-        this.operacaoRealizadaSucesso(response);
-      },
-      error => {
-        toastr.error('Erro ao tentar criar o Recurso');
-        
+        if(response.length == 0){
+          resource.id = 1;
+        }
+
+        this.baseResourceService.inserirResource(resource).subscribe(
+          response => {
+            this.operacaoRealizadaSucesso(response);
+          },
+          error => {
+            toastr.error('Erro ao tentar criar o Recurso');
+            
+          }
+        );
       }
-    );
+    );    
 
   }
 
