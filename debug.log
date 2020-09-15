@@ -97,3 +97,6 @@
 [0910/134011.651:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
 [0910/134109.084:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
 [0910/134112.425:ERROR:process_reader_win.cc(123)] NtOpenThread: {Access Denied} A process has requested access to an object, but has not been granted those access rights. (0xc0000022)
+[0914/145410.685:ERROR:crash_report_database_win.cc(558)] GetFileAttributes C:\Users\RAFAEL~1.CAM\AppData\Local\Temp\karma-40229103\Crashpad: The system cannot find the file specified. (0x2)
+[0915/122137.433:ERROR:crash_report_database_win.cc(558)] GetFileAttributes C:\Users\RAFAEL~1.CAM\AppData\Local\Temp\karma-73118681\Crashpad: The system cannot find the file specified. (0x2)
+[0915/122443.650:ERROR:crash_report_database_win.cc(558)] GetFileAttributes C:\Users\RAFAEL~1.CAM\AppData\Local\Temp\karma-16495510\Crashpad: The system cannot find the file specified. (0x2)

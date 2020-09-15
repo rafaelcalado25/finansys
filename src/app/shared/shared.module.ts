@@ -5,6 +5,7 @@ import { PipeModule } from './pipes/pipe.module';
 import { BreadCrumbComponent } from './components/bread-crumb/bread-crumb.component';
 import { RouterModule } from '@angular/router';
 import { PageHeaderComponent } from './components/page-header/page-header.component';
+//import { awaitStream } from './auxiliar/funcaoAuxiliartest'
 
 
 
@@ -21,7 +22,7 @@ import { PageHeaderComponent } from './components/page-header/page-header.compon
     ReactiveFormsModule,      
     PipeModule,   
     BreadCrumbComponent, PageHeaderComponent,
-    RouterModule ,
+    RouterModule , 
   ]
 })
 export class SharedModule { }

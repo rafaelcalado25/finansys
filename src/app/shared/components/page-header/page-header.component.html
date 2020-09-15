@@ -2,7 +2,7 @@
     [items] = "breadCrumbItems"
 ></app-bread-crumb>
 
-<div class="row mb-4" *ngIf="pageHeaderModal.id == 'FORM'">
+<div class="row mb-4" *ngIf="pageHeaderModal?.id == 'FORM'">
     <div class="col-md-10">
         <h1 class="h2 border-left pl-2">
             {{pageHeaderModal.title}}
@@ -14,7 +14,7 @@
         </a>        
     </div>
 </div>
-<div class="row mb-4" *ngIf="pageHeaderModal.id == 'LISTA'">
+<div class="row mb-4" *ngIf="pageHeaderModal?.id == 'LISTA'">
     <div class="col-md">
         <h1 class="h2 border-left pl-2">
             {{pageHeaderModal.title}}
@@ -25,4 +25,11 @@
             {{pageHeaderModal.acao}}
         </a>        
     </div>
+</div>
+<div class="row mb-4" *ngIf="pageHeaderModal?.id == 'REPORT'">
+    <div class="col-md">
+        <h1 class="h2 border-left pl-2">
+            {{pageHeaderModal.title}}
+        </h1>
+    </div>    
 </div>

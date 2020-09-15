@@ -18,5 +18,14 @@ export const PAGE_HEADER_ITEMS: Map <string,PageHeaderModal> = new Map([
             link:'',
             title: '',
         },
+    ],
+    [
+        'REPORT',
+        {
+            acao: 'Outro ',
+            id:'REPORT',
+            link:'',
+            title: '',
+        },
     ]
 ]);

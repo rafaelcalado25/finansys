@@ -3,7 +3,7 @@ import { BreadCrumbItem } from '../bread-crumb/bread-crumb.component';
 import { PAGE_HEADER_ITEMS } from '../../constantes.config';
 
 export interface PageHeaderModal {
-  id: 'LISTA' | 'FORM',
+  id: 'LISTA' | 'FORM' | 'REPORT',
   title: string,
   acao: string,
   link: string,
